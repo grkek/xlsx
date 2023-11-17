@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sst
+	xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="<%= rows.first.columns.size %>" uniqueCount="<%= rows.first.columns.map(&.name).uniq.size %>">
+	<%- rows.first.columns.each do |column| -%>
+		<si>
+			<t><%= column.name.to_s %></t>
+		</si>
+	<%- end -%>
+</sst>
